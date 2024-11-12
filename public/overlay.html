@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Look Away Reminder</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 18px;
+            margin: 0;
+            text-align: center;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="message">Look at something 20 feet away</p>
+        <p>Time remaining: <span id="countdown">20</span> seconds</p>
+    </div>
+
+    <!-- Hidden audio element to play the sound -->
+    <audio id="notificationSound" src="notification.mp3" preload="auto"></audio>
+
+    <script src="overlay.js"></script>
+</body>
+</html>
