@@ -131,6 +131,3 @@ dist
 
 # Build directory
 dist/
-
-# NodeJS lock file
-package-lock.json
