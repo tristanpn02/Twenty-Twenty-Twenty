@@ -18,14 +18,21 @@ ipcRenderer.on('show-countdown', (event, { distance, lookAwayDuration, soundVolu
         if (countdown <= 0) {
             clearInterval(interval);
             countdownElem.textContent = '0'; // Ensure it shows 0 at the end
+
+            const endAudio = document.getElementById('endSound');
+            if (endAudio) {
+                endAudio.volume = soundVolume;
+                endAudio.currentTime = 0;
+                endAudio.play().catch(err => console.error("Error playing end sound:", err))
+            }
         }
     }, 1000);
 
-    // Play the notification sound at specified volume
-    const audio = document.getElementById('notificationSound');
-    if (audio) {
-        audio.volume = soundVolume;       // Set volume from main process
-        audio.currentTime = 0;            // Reset to start
-        audio.play().catch(err => console.error("Error playing sound:", err));
+    // Play the start sound at specified volume
+    const startAudio = document.getElementById('startSound');
+    if (startAudio) {
+        startAudio.volume = soundVolume;       // Set volume from main process
+        startAudio.currentTime = 0;            // Reset to start
+        startAudio.play().catch(err => console.error("Error playing start sound:", err));
     }
 });

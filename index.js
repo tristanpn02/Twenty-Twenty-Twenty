@@ -15,12 +15,13 @@ let tray;
 let overlayWindow;
 let intervalId;
 
-// Create main window (hidden by default)
+// Create main window
 const createWindow = () => {
     mainWindow = new BrowserWindow({
-        width: 400,
-        height: 300,
-        show: false,
+        width: 720,
+        height: 320,
+        show: true,
+        autoHideMenuBar: true,
         webPreferences: {
             preload: path.join(__dirname, 'renderer.js'),
             contextIsolation: true,
