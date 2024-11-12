@@ -7,19 +7,25 @@
     "appId": "net.spilum.twenty-twenty-twenty",
     "productName": "Twenty-Twenty-Twenty",
     "files": [
-      "**/*"
+      "index.js",
+      "renderer.js",
+      "public/**/*",
+      "package.json"
     ],
     "directories": {
       "output": "dist"
     },
     "mac": {
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "target": "dmg"
     },
     "win": {
-      "icon": "public/icon.png"
+      "icon": "public/icon.png",
+      "target": "nsis"
     },
     "linux": {
-      "icon": "public/icon.png"
+      "icon": "public/icon.png",
+      "target": "AppImage"
     }
   },
   "scripts": {
