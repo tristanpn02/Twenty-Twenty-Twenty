@@ -30,9 +30,12 @@ jobs:
         run: npm run build
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      
+      - name: Verify build output
+        run: ls -al dist/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: "${{ matrix.os }}-build"
+          name: "${{ matrix.os }}-build-${{ github.ref_name }}"
           path: dist/
