@@ -1,5 +1,4 @@
-# Twenty-Twenty-Twnety
-## Eye Care Overlay App
+# Twenty-Twenty-Twenty - An Eye Care Overlay App
 
 A lightweight, non-intrusive overlay app designed to encourage healthy eye care habits by reminding you to take regular breaks.
 Following the 20-20-20 rule to help reduce eye strain by prompting you to look 20 feet away (or 6 meters) for 20 seconds every 20 minutes, without disrupting your workflow.
